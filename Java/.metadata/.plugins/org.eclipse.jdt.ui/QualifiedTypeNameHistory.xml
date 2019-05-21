@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.Joinable"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.nodes.calc.IntegerLowerThanNode"/>
+    <fullyQualifiedTypeName name="jdk.nashorn.internal.runtime.regexp.joni.exception.JOniException"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="modelo.Pessoa"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.core.common.type.ArithmeticOpTable.UnaryOp.Sqrt"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="java.util.Currency"/>
+    <fullyQualifiedTypeName name="formulario.formulario"/>
+    <fullyQualifiedTypeName name="Beans.Curso"/>
+    <fullyQualifiedTypeName name="beans.Jogo"/>
+    <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
+    <fullyQualifiedTypeName name="formulario.Administrator"/>
+    <fullyQualifiedTypeName name="beans.Usuários"/>
+    <fullyQualifiedTypeName name="beans.Funcionarios"/>
+    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+    <fullyQualifiedTypeName name="acao.Acao"/>
+    <fullyQualifiedTypeName name="beans.Pessoa"/>
+    <fullyQualifiedTypeName name="formulario.Formulario"/>
+    <fullyQualifiedTypeName name="beans.Produtos"/>
+    <fullyQualifiedTypeName name="dados.Dados"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="cargos.Estagiario"/>
+    <fullyQualifiedTypeName name="cargos.Analista"/>
+    <fullyQualifiedTypeName name="cargos.Desenvolvedor"/>
+    <fullyQualifiedTypeName name="colaborador.Colaborador"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="banco.Cheque"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+</qualifiedTypeNameHistroy>

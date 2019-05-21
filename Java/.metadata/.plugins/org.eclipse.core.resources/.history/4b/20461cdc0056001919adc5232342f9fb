@@ -1,0 +1,19 @@
+package atividades1;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		String nome = JOptionPane.showInputDialog("Informe seu nome:");
+		String idade = JOptionPane.showInputDialog("Qual sua idade?");
+		String mora = JOptionPane.showInputDialog("Onde você mora?");
+		
+		JOptionPane.showMessageDialog(null, "Olá"+nome);
+		JOptionPane.showMessageDialog(null, "Você tem"+idade);
+		JOptionPane.showMessageDialog(null, "e mora em"+mora);
+		
+		
+	}	
+
+}

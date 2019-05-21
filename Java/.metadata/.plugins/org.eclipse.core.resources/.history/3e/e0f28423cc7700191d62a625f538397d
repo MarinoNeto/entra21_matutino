@@ -1,0 +1,207 @@
+package formulario;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import acao.Acao;
+import beans.Funcionarios;
+import dados.Dados;
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.JCheckBox;
+import java.awt.Font;
+import javax.swing.JTextArea;
+import javax.swing.JToggleButton;
+import javax.swing.JList;
+import javax.swing.JScrollBar;
+import javax.swing.JFormattedTextField;
+import javax.swing.JButton;
+import javax.swing.JSpinner;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Formulario extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textColab;
+	private JTextField textSalBru;
+	private JTextField textVT;
+	private JTextField textImpRen;
+	private JTextField textSalLi;
+	private JTable tabela;
+
+	private void limparCampos() {
+		
+		//Limpar os campos
+		textColab.setText("");
+		textImpRen.setText("");
+		textSalBru.setText("");
+		textSalLi.setText("");
+		textVT.setText("");
+		
+		
+		//Focus
+		textColab.requestFocus();
+		
+	}
+	public Formulario() {
+		
+		//Objeto da classe Acao
+		Acao a = new Acao();
+		
+		
+		//Frame principal
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 493, 517);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		//Montagem Windows Builder
+		JLabel lblColaborador = new JLabel("Colaborador");
+		lblColaborador.setBounds(10, 11, 82, 14);
+		contentPane.add(lblColaborador);
+		
+		textColab = new JTextField();
+		textColab.setBounds(78, 8, 178, 20);
+		contentPane.add(textColab);
+		textColab.setColumns(10);
+		
+		JLabel lblCargo = new JLabel("Cargo");
+		lblCargo.setBounds(278, 11, 48, 14);
+		contentPane.add(lblCargo);
+		
+		//Combo box Cargos
+		JComboBox CbCargo = new JComboBox();
+		JComboBox<String> Cargo1 = new JComboBox<String>();
+		Cargo1.setEditable(true);
+		Cargo1.setBounds(319, 7, 114, 22);
+		contentPane.add(Cargo1);
+		Cargo1.addItem("Estagiário");
+		Cargo1.addItem("Desenvolvedor Jr");
+		Cargo1.addItem("Desenvolvedor Pleno");
+		Cargo1.addItem("Desenvolvedor Sênior");
+		Cargo1.addItem("Analista de sistemas Jr");
+		Cargo1.addItem("Analista de sistemas Pleno");
+		Cargo1.addItem("Analista de sistemas Sênior");
+		Cargo1.addItem("Arquiteto de software");
+		
+		
+		JLabel lblSalrioBruto = new JLabel("Sal\u00E1rio Bruto");
+		lblSalrioBruto.setBounds(10, 53, 73, 14);
+		contentPane.add(lblSalrioBruto);
+		
+		textSalBru = new JTextField();
+		textSalBru.setEnabled(false);
+		textSalBru.setBounds(78, 50, 178, 20);
+		contentPane.add(textSalBru);
+		textSalBru.setColumns(10);
+		
+		JCheckBox cbxClubF = new JCheckBox("Clube fidelidade");
+		cbxClubF.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		cbxClubF.setBounds(270, 49, 103, 18);
+		contentPane.add(cbxClubF);
+		
+		JCheckBox cbxPlaS = new JCheckBox("Plano de sa\u00FAde");
+		cbxPlaS.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		cbxPlaS.setBounds(381, 49, 103, 18);
+		contentPane.add(cbxPlaS);
+		
+		JLabel lblValeTransporte = new JLabel("Vale transporte");
+		lblValeTransporte.setBounds(10, 101, 82, 23);
+		contentPane.add(lblValeTransporte);
+		
+		JCheckBox cbxVT = new JCheckBox("");
+		cbxVT.setBounds(92, 101, 21, 23);
+		contentPane.add(cbxVT);
+		
+		textVT = new JTextField();
+		textVT.setEnabled(false);
+		textVT.setBounds(119, 101, 137, 20);
+		contentPane.add(textVT);
+		textVT.setColumns(10);
+		
+		JLabel lblImpostoDeRenda = new JLabel("Imposto de renda");
+		lblImpostoDeRenda.setBounds(217, 139, 95, 14);
+		contentPane.add(lblImpostoDeRenda);
+		
+		textImpRen = new JTextField();
+		textImpRen.setEnabled(false);
+		textImpRen.setBounds(319, 136, 148, 20);
+		contentPane.add(textImpRen);
+		textImpRen.setColumns(10);
+		
+		JLabel lblSalrioLquido = new JLabel("Sal\u00E1rio L\u00EDquido");
+		lblSalrioLquido.setBounds(230, 186, 82, 14);
+		contentPane.add(lblSalrioLquido);
+		
+		textSalLi = new JTextField();
+		textSalLi.setEnabled(false);
+		textSalLi.setBounds(319, 183, 148, 20);
+		contentPane.add(textSalLi);
+		textSalLi.setColumns(10);
+		
+		JLabel lblFaltasNoMs = new JLabel("Faltas no m\u00EAs");
+		lblFaltasNoMs.setBounds(10, 162, 73, 14);
+		contentPane.add(lblFaltasNoMs);
+		
+		JButton btnCadastro = new JButton("Cadastrar colaborador");
+		//Ação do botao de cadastro de colaborador
+		btnCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+			//Instanciar um objeto da classe Funcionarios
+				Funcionarios z = new Funcionarios();
+				z.setColab(textColab.getText());
+				z.setCargo(Cargo1.getSelectedItem().toString());
+				
+				//Cadastro automático das informações não preenchiveis
+				for (int i = 0; i<Dados.arrayFuncionarios.size(); i++) {
+					if((CbCargo.getSelectedItem().toString().contentEquals("Estagiário"))) { 
+						
+					}
+					
+				}
+				
+				//Efetuar o cadastro
+				
+				a.cadastrar(z);
+				
+				//Atualizar tabela
+				tabela.setModel(a.selecionar());
+
+				//Limpar campos
+				limparCampos();
+				
+				
+			
+			}
+		});
+		btnCadastro.setBounds(3, 228, 148, 23);
+		contentPane.add(btnCadastro);
+		
+		JButton btnEstat = new JButton("Estat\u00EDsticas");
+		btnEstat.setBounds(167, 228, 154, 23);
+		contentPane.add(btnEstat);
+		
+		JSpinner spinnerFaltas = new JSpinner();
+		spinnerFaltas.setBounds(83, 159, 30, 20);
+		contentPane.add(spinnerFaltas);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 275, 457, 192);
+		contentPane.add(scrollPane);
+		
+		tabela = new JTable();
+		scrollPane.setViewportView(tabela);
+	}
+}

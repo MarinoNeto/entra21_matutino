@@ -1,0 +1,12 @@
+package cargos;
+
+public class Desenvolvedor extends Cargo {
+
+	//IR(Imposto de Renda)
+		public void ir() {
+			
+			
+		}
+	
+	
+}

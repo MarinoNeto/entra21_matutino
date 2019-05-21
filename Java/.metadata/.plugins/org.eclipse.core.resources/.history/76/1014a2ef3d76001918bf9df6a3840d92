@@ -1,0 +1,104 @@
+package formulario;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import dados.Dados;
+
+import javax.swing.JButton;
+import java.awt.Font;
+
+public class Administrator extends JFrame {
+
+	private JPanel contentPane;
+
+	public Administrator(String tipo) {
+		
+		JPanel painelLogAdm = new JPanel();
+		painelLogAdm.setBounds(10, 0, 248, 129);
+		Container panel = null;
+		panel.add(painelLogAdm);
+		painelLogAdm.setLayout(null);
+		
+		JLabel lblNomeDeUsuario = new JLabel("Nome de usu\u00E1rio");
+		lblNomeDeUsuario.setBounds(10, 22, 82, 14);
+		painelLogAdm.add(lblNomeDeUsuario);
+		
+		JTextField textUsuAdm = new JTextField();
+		textUsuAdm.setBounds(104, 19, 134, 20);
+		painelLogAdm.add(textUsuAdm);
+		textUsuAdm.setColumns(10);
+		
+		JLabel lblSenhaAdm = new JLabel("Senha");
+		lblSenhaAdm.setBounds(44, 65, 48, 14);
+		painelLogAdm.add(lblSenhaAdm);
+		
+		JTextField textSenAdm = new JTextField();
+		textSenAdm.setBounds(104, 62, 134, 20);
+		painelLogAdm.add(textSenAdm);
+		textSenAdm.setColumns(10);
+		
+		for (int i = 0; i<Dados.arrayUsuários.size(); i++) {
+		do {
+			JOptionPane.showMessageDialog(null, "Nome de Usuário ou senha incorretos");
+		
+		setTitle("Administrador");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnCadastro = new JButton("Novo usu\u00E1rio");
+		btnCadastro.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnCadastro.setBounds(73, 20, 282, 25);
+		contentPane.add(btnCadastro);
+		
+		JButton btnAlterar = new JButton("Alterar usu\u00E1rios");
+		btnAlterar.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnAlterar.setBounds(73, 56, 282, 25);
+		contentPane.add(btnAlterar);
+		
+		JButton btnAltAdm = new JButton("Alterar dados do administrador");
+		btnAltAdm.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnAltAdm.setBounds(73, 92, 282, 25);
+		contentPane.add(btnAltAdm);
+		
+		JButton btnExcluir = new JButton("Excluir usu\u00E1rios");
+		btnExcluir.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnExcluir.setBounds(73, 128, 282, 25);
+		contentPane.add(btnExcluir);
+		
+		JButton btnAltCom = new JButton("Alterar dados pr\u00F3prios(comum)");
+		btnAltCom.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnAltCom.setEnabled(false);
+		btnAltCom.setBounds(73, 164, 282, 25);
+		contentPane.add(btnAltCom);
+		
+		JButton btnVisu = new JButton("Visualizar usu\u00E1rios");
+		btnVisu.setFont(new Font("Tahoma", Font.BOLD, 14));
+		btnVisu.setBounds(72, 200, 283, 25);
+		contentPane.add(btnVisu);
+	
+		if(tipo.equals("Comum")) {
+			btnExcluir.setEnabled(false);
+			btnAltAdm.setEnabled(false);
+			btnCadastro.setEnabled(false);
+			btnAlterar.setEnabled(false);
+		}
+	}while (((textUsuAdm.equals("Marino")) && (textSenAdm.equals("ProWay")))); 
+	 }
+			
+	}
+	
+}
+

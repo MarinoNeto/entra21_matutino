@@ -1,0 +1,104 @@
+package formulario;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import beans.Usuários;
+
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
+import formulario.Administrator;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+
+public class Formulario extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textUsuAdm;
+	private JTextField textSenAdm;
+
+	public Formulario() {
+		setTitle("Login");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 304, 201);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 11, 268, 140);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JButton btnAdministrador = new JButton("Administrador");
+		btnAdministrador.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				JPanel painelLogAdm = new JPanel();
+				painelLogAdm.setBounds(10, 0, 248, 129);
+				panel.add(painelLogAdm);
+				painelLogAdm.setLayout(null);
+				
+				JLabel lblNomeDeUsuario = new JLabel("Nome de usu\u00E1rio");
+				lblNomeDeUsuario.setBounds(10, 22, 82, 14);
+				painelLogAdm.add(lblNomeDeUsuario);
+				
+				textUsuAdm = new JTextField();
+				textUsuAdm.setBounds(104, 19, 134, 20);
+				painelLogAdm.add(textUsuAdm);
+				textUsuAdm.setColumns(10);
+				
+				JLabel lblSenhaAdm = new JLabel("Senha");
+				lblSenhaAdm.setBounds(44, 65, 48, 14);
+				painelLogAdm.add(lblSenhaAdm);
+				
+				textSenAdm = new JTextField();
+				textSenAdm.setBounds(104, 62, 134, 20);
+				painelLogAdm.add(textSenAdm);
+				textSenAdm.setColumns(10);
+				
+				Administrator A = new Administrator("Admin");
+				A.setVisible(true);
+			}
+		});
+		btnAdministrador.setBounds(0, 44, 128, 23);
+		panel.add(btnAdministrador);
+		btnAdministrador.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+				
+		JButton btnComum = new JButton("Comum");
+		btnComum.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+			Administrator A = new Administrator("Comum");
+			A.setVisible(true);
+			
+			}
+		});
+		
+		btnComum.setBounds(138, 44, 128, 23);
+		panel.add(btnComum);
+		btnComum.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JLabel lblEntrada = new JLabel("Escolha uma entrada");
+		lblEntrada.setBounds(39, 11, 190, 22);
+		panel.add(lblEntrada);
+		lblEntrada.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEntrada.setFont(new Font("Tahoma", Font.BOLD, 18));
+
+	}
+}
+
+	
+
+
+

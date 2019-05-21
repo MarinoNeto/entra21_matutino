@@ -1,0 +1,10 @@
+package acao;
+
+public class Acao {
+
+	//Cadastro
+	public void cadastrar(Pessoa p) {
+		
+	}
+	
+}

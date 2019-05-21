@@ -1,0 +1,105 @@
+package formulario;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+public class Formulario extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textNome;
+	private JTextField textIdade;
+	private JTextField textAltura;
+	private JTextField textPeso;
+	private JTable tabela;
+
+	public Formulario() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 491, 525);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNome = new JLabel("Nome");
+		lblNome.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNome.setBounds(10, 11, 77, 19);
+		contentPane.add(lblNome);
+		
+		JLabel lblIdade = new JLabel("Idade");
+		lblIdade.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblIdade.setBounds(10, 47, 77, 20);
+		contentPane.add(lblIdade);
+		
+		JLabel lblAltura = new JLabel("Altura");
+		lblAltura.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblAltura.setBounds(10, 83, 77, 20);
+		contentPane.add(lblAltura);
+		
+		JLabel lblPeso = new JLabel("Peso");
+		lblPeso.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblPeso.setBounds(10, 120, 77, 19);
+		contentPane.add(lblPeso);
+		
+		textNome = new JTextField();
+		textNome.setBounds(68, 11, 216, 20);
+		contentPane.add(textNome);
+		textNome.setColumns(10);
+		
+		textIdade = new JTextField();
+		textIdade.setColumns(10);
+		textIdade.setBounds(68, 47, 216, 20);
+		contentPane.add(textIdade);
+		
+		textAltura = new JTextField();
+		textAltura.setColumns(10);
+		textAltura.setBounds(68, 83, 216, 20);
+		contentPane.add(textAltura);
+		
+		textPeso = new JTextField();
+		textPeso.setColumns(10);
+		textPeso.setBounds(68, 121, 216, 20);
+		contentPane.add(textPeso);
+		
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnCadastrar.setBounds(10, 168, 101, 25);
+		contentPane.add(btnCadastrar);
+		
+		JButton btnAlterar = new JButton("Alterar");
+		btnAlterar.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnAlterar.setBounds(125, 168, 101, 25);
+		contentPane.add(btnAlterar);
+		
+		JButton btnExcluir = new JButton("Excluir");
+		btnExcluir.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnExcluir.setBounds(252, 168, 101, 25);
+		contentPane.add(btnExcluir);
+		
+		JButton btnSelecionar = new JButton("Selecionar");
+		btnSelecionar.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnSelecionar.setBounds(364, 168, 101, 25);
+		contentPane.add(btnSelecionar);
+		
+		JButton btnEstat = new JButton("Estat\u00EDsticas IMC");
+		btnEstat.setFont(new Font("Tahoma", Font.BOLD, 13));
+		btnEstat.setBounds(318, 9, 147, 25);
+		contentPane.add(btnEstat);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 204, 455, 271);
+		contentPane.add(scrollPane);
+		
+		tabela = new JTable();
+		scrollPane.setViewportView(tabela);
+	}
+}

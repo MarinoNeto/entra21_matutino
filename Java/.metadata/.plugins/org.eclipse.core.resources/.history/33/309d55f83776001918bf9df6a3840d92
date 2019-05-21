@@ -1,0 +1,63 @@
+package formulario;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import formulario.Administrator;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Formulario extends JFrame {
+
+	private JPanel contentPane;
+
+	public Formulario() {
+		setTitle("Login");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 304, 201);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 11, 268, 140);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JButton btnAdministrador = new JButton("Administrador");
+		btnAdministrador.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Administrator A = new Administrator();
+				A.setVisible(true);
+			}
+		});
+		btnAdministrador.setBounds(10, 44, 113, 23);
+		panel.add(btnAdministrador);
+		btnAdministrador.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JButton btnSimples = new JButton("Simples");
+		btnSimples.setBounds(148, 44, 110, 23);
+		panel.add(btnSimples);
+		btnSimples.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JLabel lblEntrada = new JLabel("Escolha uma entrada");
+		lblEntrada.setBounds(39, 11, 190, 22);
+		panel.add(lblEntrada);
+		lblEntrada.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEntrada.setFont(new Font("Tahoma", Font.BOLD, 18));
+
+	}
+}
+
+	
+
+
+

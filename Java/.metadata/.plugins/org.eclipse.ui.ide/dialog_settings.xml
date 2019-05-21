@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="386"/>
+		<item key="DIALOG_Y_ORIGIN" value="114"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\i3i\Desktop\Java\24ProvaFacil"/>
+			<item value="C:\Users\i3i\Desktop\Java\16Projeto"/>
+			<item value="C:\Users\i3i\Desktop\Java\01Lógica e Algoritmos"/>
+			<item value="C:\Users\i3i\Desktop\Java\03 Laços"/>
+			<item value="C:\Users\i3i\Desktop\Java\05Prova"/>
+			<item value="C:\Users\i3i\Desktop\Java\06 Vetores"/>
+			<item value="C:\Users\i3i\Desktop\Java\06Exproj"/>
+			<item value="C:\Users\i3i\Desktop\Java\07 Exercícios"/>
+			<item value="C:\Users\i3i\Desktop\Java\08Interface Gráfica"/>
+			<item value="C:\Users\i3i\Desktop\Java\12Encapsulamento"/>
+			<item value="C:\Users\i3i\Desktop\Java\11Construtor"/>
+			<item value="C:\Users\i3i\Desktop\Java\10 Conceitos de Orientação a Objeto"/>
+			<item value="C:\Users\i3i\Desktop\Java\09Projeto"/>
+			<item value="C:\Users\i3i\Desktop\Java\02 Laços"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wb.rcp.project.wizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.wb"/>
+			<item value="org.eclipse.wb/org.eclipse.wb.rcp"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+</section>
